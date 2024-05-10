@@ -1,5 +1,3 @@
-
-
 #include "Book.h"
 #ifndef _LIBRARYMANAGER_H_
 #define _LIBRARYMANAGER_H_
@@ -29,7 +27,7 @@ class LibraryManager {
 
 		// 타이틀 출력
 		void showTitle() {
-			cout << "***김주희 도서관***\n";
+			cout << "***check 책 서비스에 오신 것을 환영합니다***\n";
 		}
 
 		// 메뉴 출력

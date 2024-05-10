@@ -13,8 +13,6 @@
 #define ROW 3
 #define COL 5
 
-
-
 int main()
 {
 	LibraryManager manager = LibraryManager();
