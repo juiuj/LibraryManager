@@ -122,7 +122,7 @@ class LibraryManager {
 		// 책 대여
 		void rentalBook() {
 			int id = 0;
-			bool isSuccess = false;
+			bool is_Success = false;
 			cout << "대여할 책 아이디를 입력:";
 			cin >> id;
 
@@ -131,20 +131,20 @@ class LibraryManager {
 					if (bookShelf[i][j] != NULL) {
 						if (bookShelf[i][j]->getId() == id && bookShelf[i][j]->getRental() == "미대출") {
 							 bookShelf[i][j]->setRental(1);
-							 isSuccess = true;
+							 is_Success = true;
 						}
 					}
 				}
 			}
 
-			if (isSuccess)  cout << "대여완료\n";
+			if (is_Success)  cout << "대여완료\n";
 			else cout << "아이디가 없거나 미대출이 아닙니다.\n";
 		}
 
 		// 책 반납
 		void returnBook() {
 			int id = 0;
-			bool isSuccess = false;
+			bool is_Success = false;
 			cout << "반납 책 아이디를 입력:";
 			cin >> id;
 
@@ -153,13 +153,13 @@ class LibraryManager {
 					if (bookShelf[i][j] != NULL) {
 						if (bookShelf[i][j]->getId() == id && bookShelf[i][j]->getRental() == "대출중") {
 							bookShelf[i][j]->setRental(0);		
-							isSuccess = true;
+							is_Success = true;
 						}
 					}
 				}
 			}
 			
-			if (isSuccess)  cout << "반납완료\n";
+			if (is_Success)  cout << "반납완료\n";
 			else cout << "아이디가 없거나 대출중이 아닙니다.\n";
 		}
 		
